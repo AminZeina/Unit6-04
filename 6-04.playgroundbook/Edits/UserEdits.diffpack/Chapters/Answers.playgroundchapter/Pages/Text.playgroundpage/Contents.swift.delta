@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created on: Dec 2018
+// Created by: Amin Zeina
+// Created for: ICS3U
+// This program uses structures
+
+enum StreetType : String {
+    case Drive
+    case Way
+    case Road
+    case Street
+    case Lane
+}
+
+enum Province : String {
+    case AB
+    case BC
+    case MB
+    case NB
+    case NL
+    case NT
+    case NS
+    case NU
+    case ON
+    case PE
+    case QC
+    case SK
+    case YT
+}
+
+struct Address {
+    var name: String
+    var streetNumber: Int
+    var streetName: String
+    var streetType: StreetType
+    var city: String
+    var province: Province
+    var postalCode: String
+}
+
+let nameEntered = ask("Enter Name")
+let streetNumberEntered = askForNumber("Street Number")
+let streetNameEntered = ask("Street Name")
+let streetTypeEntered = StreetType(rawValue: ask("Street Type"))!
+let cityEntered = ask("City")
+let provinceEntered = Province(rawValue: ask("Province"))!
+let postalCodeEntered = ask("Postal Code")
+
+let userAddress = Address(name: nameEntered, streetNumber: streetNumberEntered, streetName: streetNameEntered, streetType: streetTypeEntered,city: cityEntered, province: provinceEntered, postalCode: postalCodeEntered)
+
+show("""
+    \(userAddress.name)  
+    \(String(userAddress.streetNumber)) \(userAddress.streetName) \(userAddress.streetType)
+    \(userAddress.city) \(userAddress.province) \(userAddress.postalCode)
+    """)
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 1354}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 72}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
